@@ -23,8 +23,8 @@ public class ShoppingBagServiceImpl extends CrudServiceImpl<ShoppingBag, Long> i
 
 
     @Override
-    public ShoppingBag findOne(Long id) {
-        return repository.findByUserId(id);
+    public ShoppingBag findOneByUsername(String username) {
+        return repository.findByUser_Username(username);
     }
 
     @Override
