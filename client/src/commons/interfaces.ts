@@ -6,6 +6,7 @@ export interface IUserSignup {
 }
 
 export interface IUserLogin {
+    id?: number;
     username: string;
     password: string;
 }
@@ -21,4 +22,15 @@ export interface IProduct {
     description: string;
     price: number;
     category: ICategory;
+}
+export interface IShoppingBag{
+    id?: number;
+    items: IItemShoppingBag[];
+    user: IUserLogin;
+}
+export interface IItemShoppingBag{
+    product: IProduct;
+    quantity: number;
+    cost: number;
+    shppingBag: IShoppingBag;
 }
