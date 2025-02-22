@@ -27,9 +27,6 @@ public class ItemShoppingBag {
     @NotNull
     private double cost;
 
-    @ManyToOne @NotNull
-    private User user;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "shopping_bag_id", nullable = false)
     @JsonBackReference
