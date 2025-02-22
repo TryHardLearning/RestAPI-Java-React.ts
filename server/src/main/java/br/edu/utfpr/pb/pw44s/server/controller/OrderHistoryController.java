@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("orders")
 public class OrderHistoryController extends CrudController<OrderHistory, OrderHistoryDTO, Long> {
-    private static IOrderHistory service;
-    private static ModelMapper modelMapper;
+    private final IOrderHistory service;
+    private final ModelMapper modelMapper;
 
-    public ProductController(IOrderHistory service, ModelMapper modelMapper) {
+    public OrderHistoryController(IOrderHistory service, ModelMapper modelMapper) {
         super(OrderHistory.class, OrderHistoryDTO.class);
         this.service = service;
         this.modelMapper = modelMapper;
