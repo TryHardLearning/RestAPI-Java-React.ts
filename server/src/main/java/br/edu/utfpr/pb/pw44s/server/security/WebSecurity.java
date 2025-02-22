@@ -61,6 +61,9 @@ public class WebSecurity {
         http.authorizeHttpRequests(authorize ->
                 authorize
                         .requestMatchers(antMatcher("/h2-console/**")).permitAll()
+                        //.requestMatchers(antMatcher("/products")).permitAll()
+                        .requestMatchers(antMatcher("/products/**")).permitAll()
+                        //.requestMatchers(antMatcher(HttpMethod.GET,"/products/**")).permitAll()
                         .requestMatchers(antMatcher(HttpMethod.POST, "/users/**")).permitAll()
                         .requestMatchers(antMatcher("/error/**")).permitAll()
 
