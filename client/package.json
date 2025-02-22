@@ -11,8 +11,6 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.10.4",
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
     "@popperjs/core": "^2.11.8",
     "@types/node": "^22.9.1",
     "axios": "^1.7.8",
