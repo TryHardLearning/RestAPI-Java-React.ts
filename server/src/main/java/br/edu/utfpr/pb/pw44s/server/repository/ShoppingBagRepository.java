@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ShoppingBagRepository extends JpaRepository<ShoppingBag, Long> {
-    ShoppingBag findByUserId(Long id);
+    ShoppingBag findByUser_Username(String username);
 }
